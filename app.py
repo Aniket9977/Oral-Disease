@@ -14,7 +14,7 @@ st.write("Upload an image to classify the oral disease.")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 if uploaded_file is not None:
     image = load_img(uploaded_file, target_size=(224, 224))
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image",  use_container_width=True)
     image = img_to_array(image) / 255.0
     image = np.expand_dims(image, axis=0)
 
